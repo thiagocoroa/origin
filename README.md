@@ -2,6 +2,8 @@
 
 Sistema de Eventos
 
+[![Build Status](https://travis-ci.org/thiagocoroa/origin.svg?branch=master)](https://travis-ci.org/thiagocoroa/origin)
+
 ## Como desenvolver?
 
 1. Clone o repositório.
