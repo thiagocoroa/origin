@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.core import mail
+from eventex.subscriptions.models import Subscription
 from django.contrib import messages 
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
@@ -25,6 +26,7 @@ def create(request):
         'subscriptions/subscription_email.txt',
         form.cleaned_data)
     
+    Subscription.objects.create(**form.cleaned_data)
     #mensagem de sucesso    
     messages.success(request, 'Inscrição realizada com Sucesso!')
 
