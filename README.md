@@ -3,6 +3,7 @@
 Sistema de Eventos
 
 [![Build Status](https://travis-ci.org/thiagocoroa/origin.svg?branch=master)](https://travis-ci.org/thiagocoroa/origin)
+[![Code Health](https://landscape.io/github/thiagocoroa/origin/master/landscape.svg?style=flat)](https://landscape.io/github/thiagocoroa/origin/master)
 
 ## Como desenvolver?
 
