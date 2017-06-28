@@ -9,7 +9,7 @@ class SubscriptionModelTest(TestCase):
 			name='Henrique Bastos',
 			cpf='12345678901',
 			email='henrique@bastos.net',
-			phone='21-99686180')
+			phone='21-99686180',)
 		self.obj.save()
 
 	def test_create(self):
@@ -20,3 +20,6 @@ class SubscriptionModelTest(TestCase):
 
 	def test_str(self):
 		self.assertEqual('Henrique Bastos', str(self.obj))
+
+	def test_paid_false(self):
+		self.assertEqual(False, self.obj.paid)

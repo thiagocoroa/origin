@@ -8,6 +8,7 @@ class Subscription(models.Model):
 	email = models.EmailField('email')
 	phone = models.CharField('telefone',max_length=20)
 	created_at = models.DateTimeField('criado em',auto_now=True)
+	paid = models.BooleanField('pago', default=False)
 
 	class Meta:
 		"""docstring for Meta"""
