@@ -38,6 +38,17 @@ class SubscriptionFormTest(TestCase):
 		errors = form.errors
 		errors_list = errors[field]
 		self.assertListEqual([msg], errors_list)'''
+	def test_email_is_optional(self):
+		form = self.make_validated_form(email = '')
+		self.assertFalse(form.errors)
+
+	def test_phone_is_optional(self):
+		form = self.make_validated_form(phone ='')
+		self.assertFalse(form.errors)
+
+	def test_must_inform_email_or_phone(self):
+		form = self.make_validated_form( email = '', phone = '')
+		self.assertListEqual(['__all__'], list(form.errors))
 
 	def make_validated_form(self,**kwargs):
 		valid = dict(name = 'Henrique Bastos', cpf = '12345678901',
